@@ -18,6 +18,7 @@
 		F22B4E901AAABCC600256200 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F22B4E8F1AAABCC600256200 /* MapKit.framework */; };
 		F22B4E921AAABCD000256200 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F22B4E911AAABCD000256200 /* CoreLocation.framework */; };
 		F2C139B91AAAD2A2001D826B /* CoffeePlace.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C139B81AAAD2A2001D826B /* CoffeePlace.m */; };
+		F2C139BC1AAAEAB9001D826B /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C139BB1AAAEAB9001D826B /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,8 @@
 		F22B4E911AAABCD000256200 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F2C139B71AAAD2A2001D826B /* CoffeePlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoffeePlace.h; sourceTree = "<group>"; };
 		F2C139B81AAAD2A2001D826B /* CoffeePlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoffeePlace.m; sourceTree = "<group>"; };
+		F2C139BA1AAAEAB9001D826B /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		F2C139BB1AAAEAB9001D826B /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,8 @@
 				F22B4E671AAABB7B00256200 /* AppDelegate.h */,
 				F22B4E681AAABB7B00256200 /* AppDelegate.m */,
 				F22B4E701AAABB7B00256200 /* Main.storyboard */,
+				F2C139BA1AAAEAB9001D826B /* DetailViewController.h */,
+				F2C139BB1AAAEAB9001D826B /* DetailViewController.m */,
 				F22B4E731AAABB7B00256200 /* Images.xcassets */,
 				F22B4E751AAABB7C00256200 /* LaunchScreen.xib */,
 				F22B4E6A1AAABB7B00256200 /* CoffeeFindr.xcdatamodeld */,
@@ -240,6 +245,7 @@
 				F22B4E8E1AAABBE400256200 /* ListViewController.m in Sources */,
 				F2C139B91AAAD2A2001D826B /* CoffeePlace.m in Sources */,
 				F22B4E6C1AAABB7B00256200 /* CoffeeFindr.xcdatamodeld in Sources */,
+				F2C139BC1AAAEAB9001D826B /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,12 +10,14 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 #import "CoffeePlace.h"
+#import "DetailViewController.h"
 
 
-@interface ListViewController () <CLLocationManagerDelegate>
+@interface ListViewController () <CLLocationManagerDelegate, UITableViewDelegate, UITableViewDataSource>
 @property CLLocationManager *locationManager;
 @property CLLocation *currentLocation;
 @property NSArray *coffeePlacesArray;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -76,17 +78,33 @@
             NSArray *sortedArray = [tempArray sortedArrayUsingDescriptors:@[sortDescriptor]];
 
             self.coffeePlacesArray = [NSArray arrayWithArray:sortedArray];
+            [self.tableView reloadData];
 
-            for (CoffeePlace *coffeePlace in self.coffeePlacesArray){
+           /* for (CoffeePlace *coffeePlace in self.coffeePlacesArray){
                 NSLog(@"%f", coffeePlace.milesDifference);
 
-            }
-
-
+            }*/
         }
 
     }];
 }
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
 
+    return self.coffeePlacesArray.count;
+}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    cell.textLabel.text = [[[self.coffeePlacesArray objectAtIndex:indexPath.row] mapItem] name];
+
+    return cell;
+}
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+
+    DetailViewController *detailVC = [segue destinationViewController];
+    detailVC.coffePlace = [self.coffeePlacesArray objectAtIndex:self.tableView.indexPathForSelectedRow.row];
+    detailVC.currentLocation = self.currentLocation;
+
+}
 
 @end
